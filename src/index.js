@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ModalDemo from './components/ModalDemo/ModalDemo';
+import ModalWorkingDemo from './components/ModalWorkingDemo/ModalWorkingDemo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './components/App/App';
 import Navigation from './components/Navigation/Navigation';
@@ -20,6 +21,7 @@ ReactDOM.render(
             <Route path="/hello-world" render={() => <h1>Hello world</h1>} />
             <Route path="/konnichiwa-sekai" render={() => <h1>こんにちは世界</h1>} />
             <Route path="/modal-demo" component={ModalDemo} />
+            <Route path="/modal-working-demo" component={ModalWorkingDemo} />
             <Route path="/" component={App} />
           </Switch>
         </main>

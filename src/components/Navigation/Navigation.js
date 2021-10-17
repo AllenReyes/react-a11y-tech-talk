@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Navigation = () => {
   const routes = [
     { toPath: '/modal-demo', label: 'Modal Proper Demo' },
+    { toPath: '/modal-working-demo', label: 'Modal Working Demo' },
   ];
   return (
     <div className={styles.Navigation} data-testid="Navigation">
