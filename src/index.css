@@ -7,10 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100vh;
+}
 #root > div {
   display: grid;
-  grid-template: auto / 250px auto;
+  grid-template: auto / 200px auto;
   grid-gap: 10px;
+  height: 100vh;
+}
+
+#root main {
+  padding: 0 16px;
+}
+
+#root > div > aside {
+  background-color: rgb(193, 193, 193);
+}
+
+/* [A11Y-TODO]: Outline, focus-visible  */
+#root a:focus-visible {
+  outline: none;
 }
 
 code {

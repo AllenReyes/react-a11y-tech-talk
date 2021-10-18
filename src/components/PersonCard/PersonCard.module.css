@@ -1,0 +1,14 @@
+.PersonCard {
+  color: #c5c5c5;
+  margin: 0;
+}
+
+.PersonCard h2 {
+  display: flex;
+  align-content: center;
+}
+
+.PersonCard img {
+  height: 30px;
+  margin-right: 5px;
+}

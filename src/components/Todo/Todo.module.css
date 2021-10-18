@@ -1,0 +1,15 @@
+.Todo ul {
+  border: 1px solid lightgrey;
+  margin: 20px 0;
+  padding: 0;
+  width: 500px;
+}
+
+.TodoAddControls {
+  display: flex;
+}
+
+.TodoAddControls input {
+  margin: 0 10px;
+  width: 300px;
+}

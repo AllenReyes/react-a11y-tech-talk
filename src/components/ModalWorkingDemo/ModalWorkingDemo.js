@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import styles from './ModalWorkingDemo.module.css';
 import Modal from '../Modal/Modal';
 
 const ModalWorkingDemo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = 'NDEAM Demo | Modal Workshop';
+  }, []);
 
   const handleCloseModal = (e) => {
     setIsModalOpen(false);

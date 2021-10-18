@@ -1,0 +1,23 @@
+.TodoItem  {
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+}
+
+.TodoItem label {
+  min-width: 500px;
+}
+
+.TodoItem > div {
+  display: flex;
+}
+
+.TodoItemControls {
+  width: 500px;
+  display: block;
+}
+
+.TodoItemControls input {
+  margin-right: 8px;
+}

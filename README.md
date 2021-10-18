@@ -10,6 +10,15 @@ Modal Working Demo introduces issues with focus management when opening and clos
 
 Modal Demo using Material UI. This flow shows proper focus management when opening or closing a modal.
 
+## Todo Workshop Widget
+
+This is a working Todo list widget. With this we can demo the following a11y issues:
+- Element focus outline
+- Alt text on an image
+- Button text
+- Child element not allowed in parent element
+- Focus management
+
 ## Available Scripts
 
 In the project directory, you can run:

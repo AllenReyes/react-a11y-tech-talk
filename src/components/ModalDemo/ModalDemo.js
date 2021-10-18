@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import styles from './ModalDemo.module.css';
 import { Button, Modal, Box, Typography } from '@mui/material';
-import { render } from '@testing-library/react';
 
 
 const ModalDemo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = 'NDEAM Demo | Modal';
+  }, []);
 
   const handleCloseModal = (e) => {
     setIsModalOpen(false);
