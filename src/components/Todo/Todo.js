@@ -105,7 +105,7 @@ const Todo = () => {
       <PersonCard description="Todo list" name={name} />
       <TodoListContent/>
       <div className={styles.TodoAddControls}>
-        <label htmlFor="new-item-input">New Todo</label>
+        <label htmlFor="new-item-input">Add Todo</label>
         <input id="new-item-input" type="text" ref={newTodoInput} onKeyDown={handleTodoKeyDown} autoComplete="off" />
         <button onClick={handleAddItem}>
           <FaPlus />

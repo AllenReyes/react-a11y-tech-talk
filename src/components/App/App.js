@@ -1,3 +1,5 @@
+import Navigation from '../Navigation/Navigation';
+
 function App() {
   return (
     <div className="App">
@@ -6,6 +8,7 @@ function App() {
         <a href="https://go.linkedin.biz/ndeam">
           go/ndeam
         </a>
+        <Navigation/>
       </header>
     </div>
   );

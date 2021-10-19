@@ -1,20 +1,16 @@
 .TodoItem  {
-  margin: 0;
-  list-style-type: none;
   border-bottom: 1px solid lightgrey;
-  padding: 10px;
-}
-
-.TodoItem label {
-  min-width: 500px;
+  list-style-type: none;
+  margin: 0;
+  padding: 4px;
 }
 
 .TodoItem > div {
-  display: flex;
+  display: grid;
+  grid-template: auto / 1fr auto;
 }
 
 .TodoItemControls {
-  width: 500px;
   display: block;
 }
 

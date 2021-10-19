@@ -5,29 +5,21 @@ import ModalWorkingDemo from './components/ModalWorkingDemo/ModalWorkingDemo';
 import Todo from './components/Todo/Todo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './components/App/App';
-import Navigation from './components/Navigation/Navigation';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <div>
-        <aside>
-          <Navigation />
-        </aside>
-        <main>
-          <h1>NDEAM - Accessibility Demos </h1>
-          <Switch>
-            <Route path="/hello-world" render={() => <h1>Hello world</h1>} />
-            <Route path="/konnichiwa-sekai" render={() => <h1>こんにちは世界</h1>} />
-            <Route path="/modal-demo" component={ModalDemo} />
-            <Route path="/modal-working-demo" component={ModalWorkingDemo} />
-            <Route path="/todo" component={Todo} />
-            <Route path="/" component={App} />
-          </Switch>
-        </main>
-      </div>
+      <main>
+        <h1>NDEAM - Demos </h1>
+        <Switch>
+          <Route path="/modal-demo" component={ModalDemo} />
+          <Route path="/modal-working-demo" component={ModalWorkingDemo} />
+          <Route path="/todo" component={Todo} />
+          <Route path="/" component={App} />
+        </Switch>
+      </main>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
