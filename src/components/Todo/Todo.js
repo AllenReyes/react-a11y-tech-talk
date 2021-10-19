@@ -35,7 +35,7 @@ const Todo = () => {
         id: new Date().toJSON(),
         label,
         addedBy: name,
-        isSelected: false
+        isChecked: false
       };
       const newTodoList = [...todoList, newTodo];
 
@@ -50,12 +50,12 @@ const Todo = () => {
     todoListUpdateHelper(filteredList);
   };
 
-  const selectItem = (id) => {
+  const toggleCheckItem = (id) => {
     const newTodoList = todoList.map((item) => {
       if (item.id === id) {
         return {
           ...item,
-          isSelected: !item.isSelected,
+          isChecked: !item.isChecked,
         };
       }
 
@@ -85,10 +85,10 @@ const Todo = () => {
               <TodoItem
                 key={item.id}
                 id={item.id}
-                isChecked={item.isSelected}
+                isChecked={item.isChecked}
                 description={item.label}
                 removeItem={removeItem}
-                selectItem={selectItem}
+                checkItem={toggleCheckItem}
               />
             );
           })}

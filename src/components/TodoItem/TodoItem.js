@@ -8,7 +8,7 @@ const TodoItem = ({
   id,
   isChecked,
   removeItem,
-  selectItem
+  checkItem
 }) => {
 
 
@@ -16,8 +16,8 @@ const TodoItem = ({
     removeItem(id);
   };
 
-  const handleSelectItem = () => {
-    selectItem(id);
+  const handleCheckItem = () => {
+    checkItem(id);
   };
 
   const itemCheckboxInputId = `todo-item-checkboxid-${id.toString()}`;
@@ -27,11 +27,11 @@ const TodoItem = ({
       <li className={styles.TodoItem} data-testid="TodoItem" data-id={id}>
         <div>
           <div className={styles.TodoItemControls}>
-            <input 
-              id={itemCheckboxInputId} 
-              type="checkbox" 
-              onClick={handleSelectItem} 
-              defaultChecked={isChecked} 
+            <input
+              id={itemCheckboxInputId}
+              type="checkbox"
+              onClick={handleCheckItem}
+              defaultChecked={isChecked}
             />
             <label htmlFor={itemCheckboxInputId}>{description}</label>
           </div>
@@ -49,7 +49,7 @@ TodoItem.propTypes = {
   id: PropTypes.any.isRequired,
   isChecked: PropTypes.bool.isRequired,
   removeItem: PropTypes.func.isRequired,
-  selectItem: PropTypes.func.isRequired
+  checkItem: PropTypes.func.isRequired
 };
 
 TodoItem.defaultProps = {
