@@ -9,7 +9,7 @@ const name = 'Mega Man';
 
 const Todo = () => {
   const [todoList, setTodoList] = useState(getList());
-  const [todoListLength, setTodoListLength] = useState(0);
+  const [todoListLength, setTodoListLength] = useState(todoList.length);
 
   useEffect(() => {
     document.title = 'NDEAM Demo | Todo Workshop';
@@ -23,7 +23,7 @@ const Todo = () => {
     }
   }, [todoListLength]);
 
-  const updateTodoList = (list) => {
+  const todoListUpdateHelper = (list) => {
     setTodoList(list);
     setList(list);
     setTodoListLength(list.length);
@@ -39,9 +39,7 @@ const Todo = () => {
       };
       const newTodoList = [...todoList, newTodo];
 
-      updateTodoList(newTodoList);
-    } else {
-      newTodoInput.current.focus();
+      todoListUpdateHelper(newTodoList);
     }
   };
 
@@ -49,7 +47,7 @@ const Todo = () => {
     const filteredList = todoList.filter(item => {
       return item.id !== id;
     });
-    updateTodoList(filteredList);
+    todoListUpdateHelper(filteredList);
   };
 
   const selectItem = (id) => {
@@ -64,7 +62,7 @@ const Todo = () => {
       return item;
     });
 
-    updateTodoList(newTodoList);
+    todoListUpdateHelper(newTodoList);
   };
 
   const handleAddItem = () => {
@@ -82,16 +80,18 @@ const Todo = () => {
     if (todoList.length) {
       return (
         <ul>
-          {todoList.map(item => (
-            <TodoItem
-              key={item.id}
-              id={item.id}
-              isSelected={item.isSelected}
-              description={item.label}
-              removeItem={removeItem}
-              selectItem={selectItem}
-            />
-          ))}
+          {todoList.map(item => {
+            return (
+              <TodoItem
+                key={item.id}
+                id={item.id}
+                isChecked={item.isSelected}
+                description={item.label}
+                removeItem={removeItem}
+                selectItem={selectItem}
+              />
+            );
+          })}
         </ul>
       );
     }
